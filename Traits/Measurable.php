@@ -1,6 +1,6 @@
 <?php
     trait Measurable {
-        protected $larghezza;
+        protected $format;
 
         public function setFormat(float $format){
             if($format>0 && $format <=300){

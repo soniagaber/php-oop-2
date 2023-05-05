@@ -3,7 +3,19 @@
     require_once './Models/food.php';
     require_once './Models/toy.php';
     require_once './Models/bed.php';
-    require_once 'db.php'
+    require_once 'db.php';
+
+    try{
+        $beds[1]->setFormat(-2);
+    } catch (Exception $e){
+        echo $e;
+    }
+
+    try{
+        $toys[0]->setFormat(50);
+    } catch (Exception $e){
+        echo $e->getMessage();
+    }
 
 ?>
 
@@ -79,6 +91,7 @@
                     <?php
                         }
                     ?>
+                    <p class="card-text">formato: <?= $singleToy->getFormat()?> cm</p>
                     <p class="card-text">prezzo: <?= $singleToy->price ?> &euro;</p>
                     <a href="#" class="btn btn-primary">Aggiungi al carrello</a>
                 </div>
@@ -115,6 +128,7 @@
                     <?php
                         }
                     ?>
+                    <p class="card-text">formato: <?= $singleBed->getFormat()?> cm</p>
                     <p class="card-text">prezzo: <?= $singleBed->price ?> &euro;</p>
                     <a href="#" class="btn btn-primary">Aggiungi al carrello</a>
                 </div>

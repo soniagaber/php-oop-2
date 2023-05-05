@@ -1,5 +1,7 @@
 <?php
     class Food extends Product{
+
+        
         public $type;
         public $brand;
 
@@ -9,7 +11,6 @@
             $this -> type = $type;
             $this -> brand = $brand;
         }
-
     }
 
 ?>
